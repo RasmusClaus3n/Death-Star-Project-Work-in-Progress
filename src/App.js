@@ -1,6 +1,8 @@
 import Navbar from './components/Nav';
 import LandingPage from './components/LandingPage';
 import Planets from './components/Planets';
+
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './css/global.css';

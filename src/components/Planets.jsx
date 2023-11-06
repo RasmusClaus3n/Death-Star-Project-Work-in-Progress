@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import CallApi from './CallPlanetApi';
 import Planet from './Planet';
+import Loader from './Loader';
+import ErrorMsg from './ErrorMsg';
 import NextAndBackArrows from './Arrows';
-
-import TimeOutError from './TimeOutError';
 
 const Planets = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [paginationLoading, setPaginationLoading] = useState(false);
 
   const PLANETS_URL = `https://swapi.dev/api/planets/?format=json&page=${currentPage}`;
   const { data: planetsData, loading, error } = CallApi(PLANETS_URL);
@@ -25,24 +24,11 @@ const Planets = () => {
   };
 
   if (error) {
-    return (
-      <div className='error-message'>
-        <img src='/images/icons/error.svg' alt='' />
-        <p>Error: {error.message}</p>
-        <p>
-          SWAPI has a lot of request each day. Please refresh the browser or try
-          again later.
-        </p>
-      </div>
-    );
+    return <ErrorMsg error={error} />;
   }
 
   if (loading) {
-    return (
-      <div className='loading-container'>
-        <span className='loader'></span>
-      </div>
-    );
+    return <Loader />;
   }
 
   const planets = planetsData.results;

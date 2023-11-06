@@ -35,15 +35,16 @@
   border: none;
   border-radius: 3px;
   background: linear-gradient(150deg, #5b3286, #8e214a);
+  box-shadow: 5px 5px 5px 2px rgba(2, 5, 5, 0.2);
+  transition: fadeInFromBottom 0.3s ease-in;
+  transition: filter 0.25s ease-in;
 
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-
-  background-position: 100%;
   opacity: 0;
   animation: fadeInFromBottom 1s 1.5s forwards;
+}
+
+.get-started-btn:hover {
+  filter: hue-rotate(35deg);
 }
 
 .lp-text {

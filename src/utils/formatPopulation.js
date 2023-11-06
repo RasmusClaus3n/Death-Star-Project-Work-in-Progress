@@ -1,7 +1,9 @@
-import React from 'react';
-
 const formatPopulation = (population) => {
-  if (population >= 1000000000) {
+  if (population >= 1000000000000) {
+    return `${(population / 1000000000000).toLocaleString('en-US', {
+      maximumFractionDigits: 1,
+    })} trillion`;
+  } else if (population >= 1000000000) {
     return `${(population / 1000000000).toLocaleString('en-US', {
       maximumFractionDigits: 1,
     })} billion`;

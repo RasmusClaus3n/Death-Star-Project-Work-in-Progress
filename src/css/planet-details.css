@@ -3,23 +3,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
+
+  border-radius: 10px;
   color: #fff;
   text-transform: capitalize;
   background: #1e1e26;
 }
 
-.planet-dtls-content {
+.planet-dtls-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto 1fr;
   grid-column-gap: 40px;
   grid-row-gap: 50px;
   margin: 20px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
   text-align: center;
 }
 
 .planet-header {
+  margin-bottom: 80px;
   text-align: center;
+  opacity: 0;
+  animation: fadeInFromBottom 0.7s forwards;
 }
 
 .planet-header img {
@@ -28,24 +38,33 @@
     brightness(92%) contrast(92%);
 }
 
-.planet-dtls-content img {
-  width: 3em;
-  height: 3em;
-  filter: invert(16%) sepia(32%) saturate(6118%) hue-rotate(319deg)
-    brightness(89%) contrast(87%);
+.planet-dtls-content {
+  margin-top: 75px;
 }
 
-.planet-dtls-content .planet-name {
+.planet-dtls-stats {
+  opacity: 0;
+  animation: fadeInFromBottom 0.7s 0.18s forwards;
+}
+
+.planet-dtls-stats img {
+  width: 3em;
+  height: 3em;
+  filter: invert(16%) sepia(62%) saturate(2884%) hue-rotate(316deg)
+    brightness(89%) contrast(90%); /* filter color: #dd3977; */
+}
+
+.planet-dtls-stats .planet-name {
   font-size: 2em;
 }
 
-.planet-dtls-content h3 {
+.planet-dtls-stats h3 {
   font-size: 1em;
   font-weight: 300;
-  color: #91224c;
+  color: #dd3977;
 }
 
-.planet-dtls-content h2 {
+.planet-dtls-stats h2 {
   font-size: 1em;
 }
 

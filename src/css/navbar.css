@@ -45,11 +45,13 @@
 
 .nav-items-left a:hover .linkedin {
   filter: unset;
+  transform: scale(1.1);
 }
 
 .nav-items-left a:hover .github {
   filter: invert(98%) sepia(13%) saturate(156%) hue-rotate(2deg)
     brightness(116%) contrast(100%);
+  transform: scale(1.1);
 }
 
 .nav-items-right li {
@@ -81,7 +83,7 @@
   width: 0;
   height: 1.5px;
   margin-top: 5px;
-  background: linear-gradient(180deg, #5b3286, #8e214a);
+  background: linear-gradient(180deg, #5b3286, #dd3977);
   transition: width 0.5s;
   border-radius: 10px;
 }

@@ -9,7 +9,7 @@ import PlanetDetails from './components/PlanetDetails';
 
 import './css/global.css';
 import './css/footer.css';
-import './css/style.css';
+import './css/landing-page.css';
 import './css/planets.css';
 import './css/loader.css';
 import './css/animations.css';

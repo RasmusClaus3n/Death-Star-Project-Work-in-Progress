@@ -1,0 +1,82 @@
+.landing-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+
+  color: #fff;
+}
+
+.landing-page-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.get-started-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 0px 100px;
+
+  font-family: Poppins;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  background: linear-gradient(150deg, #5b3286, #8e214a);
+
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+
+  background-position: 100%;
+  opacity: 0;
+  animation: fadeInFromBottom 1s 1.5s forwards;
+}
+
+.lp-text {
+  cursor: default;
+}
+
+.quick-sol-txt {
+  margin-top: 0;
+  font-size: 1.5em;
+  font-weight: 100;
+
+  opacity: 0;
+  animation: fadeInFromBottom 1s 1s forwards;
+}
+
+.death-star-txt {
+  margin-bottom: 0;
+  font-size: 4em;
+  font-weight: 500;
+
+  opacity: 0;
+  animation: fadeInFromBottom 1s 0.5s forwards;
+}
+
+.death-star-svg {
+  /* min-width: 60vh; */
+  margin: auto;
+  margin-top: 20px;
+
+  opacity: 0;
+  animation: fadeInFromLeft 1s forwards;
+}
+
+.github-svg {
+  display: none;
+}

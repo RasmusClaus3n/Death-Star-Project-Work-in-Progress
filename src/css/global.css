@@ -1,0 +1,24 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #19191c;
+  margin-right: 4em;
+  margin-left: 4em;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.error-message img {
+  filter: invert(40%) sepia(40%) saturate(399%) hue-rotate(218deg)
+    brightness(92%) contrast(92%);
+}

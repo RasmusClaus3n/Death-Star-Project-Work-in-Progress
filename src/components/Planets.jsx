@@ -5,6 +5,7 @@ import Loader from './Loader';
 import ErrorMsg from './ErrorMsg';
 import NextAndBackArrows from './Arrows';
 import PlanetDetails from './PlanetDetails';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Planets = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -33,19 +34,21 @@ const Planets = () => {
   }
 
   const planets = planetsData.results;
-  const isPrevDisabled = currentPage === 1; // Disable previous arrow on first page
-  const isNextDisabled = !planetsData.next; // Disable next arrow when there's no next page
+  const isPrevDisabled = currentPage === 1;
+  const isNextDisabled = !planetsData.next;
 
   return (
     <>
       <div className='planets-container'>
         <section className='planets-content'>
           {planets.map((planet, index) => (
-            <Planet key={index} {...planet} />
+            // Wrap each Planet component with a Link to the PlanetDetails page
+            <Link key={index} to={`/planets/${index + 1}`}>
+              <Planet {...planet} />
+            </Link>
           ))}
         </section>
       </div>
-      {/* Pagination */}
       <NextAndBackArrows
         handlePrevPage={handlePrevPage}
         handleNextPage={handleNextPage}

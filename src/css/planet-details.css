@@ -22,8 +22,9 @@
   grid-row-gap: 50px;
   margin: 20px;
   margin-bottom: 50px;
-  padding-bottom: 50px;
   padding-top: 50px;
+
+  max-width: 900px;
 
   text-align: center;
 }
@@ -74,6 +75,35 @@
   margin: auto;
   cursor: default;
 }
+
+.films-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.films-content {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(100px, 200px)
+  ); /* Adjust the values as needed */
+
+  grid-column-gap: 40px;
+  grid-row-gap: 50px;
+}
+
+.films-content img {
+  width: 100%;
+  height: 100%;
+  filter: invert(100%) sepia(6%) saturate(7277%) hue-rotate(176deg)
+    brightness(117%) contrast(103%);
+  /* (fill #fffff)  */
+}
+
+/* attack of the clones: width: 9.6em;
+} */
 
 /* Planet stats fade in */
 

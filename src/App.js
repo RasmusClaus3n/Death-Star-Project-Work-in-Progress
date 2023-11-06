@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route index element={<LandingPage />} />
         <Route path='/planets' element={<Planets />} />
-        <Route path='/planets/:id' element={<PlanetDetails />} />
+        <Route path='/planets/:planetName' element={<PlanetDetails />} />
       </Routes>
     </Router>
   );

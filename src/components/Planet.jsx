@@ -1,7 +1,6 @@
 import React from 'react';
-import { assignPlanetImg } from '../utils/assignPlanetImg';
-
-const Planet = ({ name, terrain, population }) => {
+import { assignPlanetImg } from '../utils/assignImagePaths';
+const Planet = ({ name, terrain }) => {
   let terrainFirstWord = terrain?.split(',')[0].trim().toLowerCase();
 
   let planetImg = assignPlanetImg(terrainFirstWord);

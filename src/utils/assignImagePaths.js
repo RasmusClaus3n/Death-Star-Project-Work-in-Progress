@@ -1,4 +1,4 @@
-function assignPlanetImg(terrainFirstWord) {
+const assignPlanetImg = (terrainFirstWord) => {
   let terrainImage = 'nebula.svg';
 
   if (
@@ -49,6 +49,32 @@ function assignPlanetImg(terrainFirstWord) {
   }
 
   return terrainImage;
-}
+};
 
-export { assignPlanetImg };
+const assignFilmImgs = (films) => {
+  const filmImgs = [];
+
+  films.forEach((film) => {
+    if (film === 'https://swapi.dev/api/films/1/') {
+      filmImgs.push('anh.svg');
+    }
+    if (film === 'https://swapi.dev/api/films/2/') {
+      filmImgs.push('esb.svg');
+    }
+    if (film === 'https://swapi.dev/api/films/3/') {
+      filmImgs.push('rotj.svg');
+    }
+    if (film === 'https://swapi.dev/api/films/4/') {
+      filmImgs.push('apm.svg');
+    }
+    if (film === 'https://swapi.dev/api/films/5/') {
+      filmImgs.push('aotc.svg');
+    }
+    if (film === 'https://swapi.dev/api/films/6/') {
+      filmImgs.push('rots.svg');
+    }
+  });
+  return filmImgs;
+};
+
+export { assignPlanetImg, assignFilmImgs };

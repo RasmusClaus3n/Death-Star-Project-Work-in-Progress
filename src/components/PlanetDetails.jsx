@@ -6,12 +6,12 @@ import Loader from './Loader';
 import ErrorMsg from './ErrorMsg';
 
 import { formatPopulation } from '../utils/formatPopulation';
-import { assignPlanetImg } from '../utils/assignPlanetImg';
+import { assignPlanetImg, assignFilmImgs } from '../utils/assignImagePaths';
 
 const PlanetDetails = () => {
-  const { id } = useParams();
+  const { planetName } = useParams();
 
-  const PLANET_URL = `https://swapi.dev/api/planets/?search=${id}&format=json`;
+  const PLANET_URL = `https://swapi.dev/api/planets/?search=${planetName}&format=json`;
   const { data: planetData, loading, error } = CallSWAPI(PLANET_URL);
 
   if (loading) {
@@ -38,10 +38,12 @@ const PlanetDetails = () => {
 
   let formattedPopulation = formatPopulation(population);
 
-  console.log("Here's the planetData:" + planetData);
-
   let terrainFirstWord = terrain?.split(',')[0].trim().toLowerCase();
   let planetImg = assignPlanetImg(terrainFirstWord);
+
+  console.log(films);
+
+  let filmImgs = assignFilmImgs(films);
 
   return (
     <main className='planet-dtls-container'>
@@ -105,8 +107,18 @@ const PlanetDetails = () => {
                 : 'Unknown'}{' '}
             </h2>
           </div>
-          {/* <p>Residents: {residents.join(', ')}</p>
-        <p>Films: {films.join(', ')}</p> */}
+        </section>
+        <section className='films-container'>
+          <h1>{films.length > 0 ? `Appears in` : ''} </h1>
+          <div className='films-content'>
+            {filmImgs.map((filmImg, index) => (
+              <img
+                key={index}
+                src={`/images/logos/${filmImg}`}
+                alt={`Film ${index + 1}`}
+              />
+            ))}
+          </div>
         </section>
       </div>
     </main>

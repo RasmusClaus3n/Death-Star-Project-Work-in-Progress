@@ -4,6 +4,7 @@ import Planet from './Planet';
 import Loader from './Loader';
 import ErrorMsg from './ErrorMsg';
 import NextAndBackArrows from './Arrows';
+import PlanetDetails from './PlanetDetails';
 
 const Planets = () => {
   const [currentPage, setCurrentPage] = useState(1);

@@ -4,8 +4,14 @@ body {
   margin-right: 4em;
   margin-left: 4em;
 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   scrollbar-width: thin; /* standard scrollbar width */
   scrollbar-color: #434356 #1e1e26; /* standard scrollbar color */
+
+  overflow: scroll;
 }
 
 /* Standard Track styles */

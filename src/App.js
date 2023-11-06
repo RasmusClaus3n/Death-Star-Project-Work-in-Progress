@@ -1,13 +1,14 @@
-import CallSWAPI from './components/CallSWAPI';
 import Navbar from './components/Nav';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Footer from './components/Footer';
 import LandingPage from './components/LandingPage';
 import Planets from './components/Planets';
 import PlanetDetails from './components/PlanetDetails';
 
-import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import './css/global.css';
+import './css/footer.css';
 import './css/style.css';
 import './css/planets.css';
 import './css/loader.css';

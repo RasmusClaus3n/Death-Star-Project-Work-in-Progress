@@ -1,20 +1,55 @@
 .navbar {
   opacity: 0;
   animation: fadeIn 1s 2s forwards;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .navbar ul {
   list-style-type: none;
 }
 
-.nav-items-right {
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items-left {
+  display: flex;
+  justify-content: flex-start;
   list-style-type: none;
   padding: 0px;
   margin: 0px;
-  display: flex;
   gap: 20px;
+  align-items: center;
+}
+
+.nav-items-right {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  gap: 20px;
+}
+
+.nav-items-left .github {
+  width: 3.5em;
+  transition: all 0.3s ease;
+}
+
+.nav-items-left .linkedin {
+  width: 2.5em;
+  filter: grayscale(100%) opacity(20%);
+  transition: all 0.3s ease;
+}
+
+.nav-items-left a:hover .linkedin {
+  filter: unset;
+}
+
+.nav-items-left a:hover .github {
+  filter: invert(98%) sepia(13%) saturate(156%) hue-rotate(2deg)
+    brightness(116%) contrast(100%);
 }
 
 .nav-items-right li {
@@ -32,11 +67,6 @@
 
 .nav-items-right a:hover {
   transform: scale(1.08);
-}
-
-.nav-items-left {
-  padding: 0px;
-  margin: 0px;
 }
 
 .nav-items-right a {

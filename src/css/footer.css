@@ -1,0 +1,19 @@
+footer {
+  color: white;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  padding-bottom: 10px;
+}
+
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

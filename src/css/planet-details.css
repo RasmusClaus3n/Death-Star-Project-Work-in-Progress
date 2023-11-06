@@ -1,13 +1,11 @@
 .planet-dtls-container {
   display: flex;
-  flex-direction: column; /* Set the flex-direction to column */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
   text-transform: capitalize;
   background: #1e1e26;
-  height: 100vh; /* Set the height to 100% of the viewport height */
-  overflow: auto; /* Add overflow property to prevent content clipping */
 }
 
 .planet-dtls-content {
@@ -43,6 +41,7 @@
 
 .planet-dtls-content h3 {
   font-size: 1em;
+  font-weight: 300;
   color: #91224c;
 }
 

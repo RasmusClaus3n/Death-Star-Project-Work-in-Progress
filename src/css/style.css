@@ -15,10 +15,10 @@
   grid-row-gap: 0px;
 
   margin: 0;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
 }
 .get-started-btn {
   display: inline-block;
@@ -76,8 +76,4 @@
 
   opacity: 0;
   animation: fadeInFromLeft 1s forwards;
-}
-
-.github-svg {
-  display: none;
 }

@@ -17,10 +17,6 @@ import './css/arrows.css';
 import './css/planet-details.css';
 
 function App() {
-  const PLANET_URL = `https://swapi.dev/api/planets/1/`;
-  const { data: planetsData, loading, error } = CallSWAPI(PLANET_URL);
-  console.log(planetsData);
-
   return (
     <Router>
       <Navbar />

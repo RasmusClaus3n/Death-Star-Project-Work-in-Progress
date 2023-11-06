@@ -3,6 +3,33 @@ body {
   background-color: #19191c;
   margin-right: 4em;
   margin-left: 4em;
+
+  scrollbar-width: thin; /* standard scrollbar width */
+  scrollbar-color: #434356 #1e1e26; /* standard scrollbar color */
+}
+
+/* Standard Track styles */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e26;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #434356;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #736292;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
 }
 
 .error-message {

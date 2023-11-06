@@ -19,6 +19,10 @@
   margin: 20px;
 }
 
+.planets-content a {
+  text-decoration: none !important;
+}
+
 .planet-card {
   display: flex;
   justify-content: center;
@@ -46,7 +50,7 @@
 }
 
 .planet-card-content a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #fff;
 }
 

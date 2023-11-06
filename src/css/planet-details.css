@@ -1,6 +1,55 @@
 .planet-dtls-container {
   display: flex;
+  flex-direction: column; /* Set the flex-direction to column */
   justify-content: center;
   align-items: center;
   color: #fff;
+  text-transform: capitalize;
+  background: #1e1e26;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  overflow: auto; /* Add overflow property to prevent content clipping */
+}
+
+.planet-dtls-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 50px;
+  margin: 20px;
+  text-align: center;
+}
+
+.planet-header {
+  text-align: center;
+}
+
+.planet-header img {
+  width: 8em;
+  filter: invert(40%) sepia(40%) saturate(399%) hue-rotate(218deg)
+    brightness(92%) contrast(92%);
+}
+
+.planet-dtls-content img {
+  width: 3em;
+  height: 3em;
+  filter: invert(16%) sepia(32%) saturate(6118%) hue-rotate(319deg)
+    brightness(89%) contrast(87%);
+}
+
+.planet-dtls-content .planet-name {
+  font-size: 2em;
+}
+
+.planet-dtls-content h3 {
+  font-size: 1em;
+  color: #91224c;
+}
+
+.planet-dtls-content h2 {
+  font-size: 1em;
+}
+
+.planet-dtls-card {
+  margin: auto;
 }

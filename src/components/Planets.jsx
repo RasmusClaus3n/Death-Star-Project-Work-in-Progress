@@ -41,9 +41,8 @@ const Planets = () => {
     <>
       <div className='planets-container'>
         <section className='planets-content'>
-          {planets.map((planet, index) => (
-            // Wrap each Planet component with a Link to the PlanetDetails page
-            <Link key={index} to={`/planets/${index + 1}`}>
+          {planets.map((planet) => (
+            <Link key={planet.name} to={`/planets/${planet.name}`}>
               <Planet {...planet} />
             </Link>
           ))}

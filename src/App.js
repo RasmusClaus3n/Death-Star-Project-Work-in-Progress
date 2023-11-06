@@ -1,6 +1,7 @@
 import Navbar from './components/Nav';
 import LandingPage from './components/LandingPage';
 import Planets from './components/Planets';
+import CallSWAPI from './components/CallSWAPI';
 
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -14,6 +15,10 @@ import './css/navbar.css';
 import './css/arrows.css';
 
 function App() {
+  const PLANET_URL = `https://swapi.dev/api/planets/1/`;
+  const { data: planetsData, loading, error } = CallSWAPI(PLANET_URL);
+  console.log(planetsData);
+
   return (
     <Router>
       <Navbar />

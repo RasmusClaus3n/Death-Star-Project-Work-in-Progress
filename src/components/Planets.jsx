@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CallApi from './CallPlanetApi';
+import CallSWAPI from './CallSWAPI';
 import Planet from './Planet';
 import Loader from './Loader';
 import ErrorMsg from './ErrorMsg';
@@ -10,7 +10,7 @@ const Planets = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const PLANETS_URL = `https://swapi.dev/api/planets/?format=json&page=${currentPage}`;
-  const { data: planetsData, loading, error } = CallApi(PLANETS_URL);
+  const { data: planetsData, loading, error } = CallSWAPI(PLANETS_URL);
 
   const handleNextPage = () => {
     if (planetsData && planetsData.next) {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function CallApi(url) {
+function CallSWAPI(url) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -44,4 +44,4 @@ function CallApi(url) {
   return { data, loading, error };
 }
 
-export default CallApi;
+export default CallSWAPI;

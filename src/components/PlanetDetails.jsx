@@ -108,19 +108,24 @@ const PlanetDetails = () => {
             </h2>
           </div>
         </section>
-        <section className='films-container'>
-          <h1 className='sub-heading'>
-            {films.length > 0 ? `Appears in` : ''}{' '}
-          </h1>
-          <div className='films-content'>
-            {filmImgs.map((filmImg, index) => (
-              <img
-                key={index}
-                src={`/images/logos/${filmImg}`}
-                alt={`Film ${index + 1}`}
-              />
-            ))}
-          </div>
+        {films.length > 0 && (
+          <section className='films-container'>
+            <h1 className='sub-heading'>Appears in</h1>
+            <div className='films-content'>
+              {filmImgs.map((filmImg, index) => (
+                <img
+                  key={index}
+                  src={`/images/logos/${filmImg}`}
+                  alt={`Film ${index + 1}`}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section className='people-container'>
+          <h1 className='sub-heading'>Notable Residents</h1>
+          <div className='people-content'></div>
         </section>
       </div>
     </main>

@@ -1,12 +1,9 @@
 import React from 'react';
 
-import ImageComponent from './TestCall';
-
 const LandingPage = () => {
   return (
     <div className='landing-page-container'>
       <section className='landing-page-content'>
-        <ImageComponent searchTerm='Beru Whitesun lars' />
         <img
           className='death-star-svg'
           id='death-star-svg'

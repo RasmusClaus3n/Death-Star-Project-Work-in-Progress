@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CallSWAPI from './CallSWAPI';
+import { CallSWAPI } from '../api/CallSWAPI';
 import Planet from './Planet';
 import Loader from './Loader';
 import ErrorMsg from './ErrorMsg';

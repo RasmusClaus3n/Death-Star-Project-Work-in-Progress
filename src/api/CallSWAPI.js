@@ -44,4 +44,4 @@ function CallSWAPI(url) {
   return { data, loading, error };
 }
 
-export default CallSWAPI;
+export { CallSWAPI };

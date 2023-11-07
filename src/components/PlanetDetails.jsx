@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import CallSWAPI from './CallSWAPI';
+import { CallSWAPI } from '../api/CallSWAPI';
 import Loader from './Loader';
 import ErrorMsg from './ErrorMsg';
 
@@ -109,7 +109,9 @@ const PlanetDetails = () => {
           </div>
         </section>
         <section className='films-container'>
-          <h1>{films.length > 0 ? `Appears in` : ''} </h1>
+          <h1 className='sub-heading'>
+            {films.length > 0 ? `Appears in` : ''}{' '}
+          </h1>
           <div className='films-content'>
             {filmImgs.map((filmImg, index) => (
               <img

@@ -21,9 +21,8 @@
   grid-column-gap: 40px;
   grid-row-gap: 50px;
   margin: 20px;
-  margin-bottom: 50px;
   padding-top: 50px;
-
+  padding-bottom: 30px;
   max-width: 900px;
 
   text-align: center;
@@ -76,6 +75,11 @@
   cursor: default;
 }
 
+.planet-name {
+  font-weight: 600;
+  font-size: 2.3em;
+}
+
 .films-container {
   display: flex;
   justify-content: center;
@@ -92,6 +96,9 @@
 
   grid-column-gap: 40px;
   grid-row-gap: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 100px;
 }
 
 .films-content img {
@@ -100,6 +107,10 @@
   filter: invert(100%) sepia(6%) saturate(7277%) hue-rotate(176deg)
     brightness(117%) contrast(103%);
   /* (fill #fffff)  */
+}
+
+.sub-heading {
+  padding-bottom: 40px;
 }
 
 /* attack of the clones: width: 9.6em;

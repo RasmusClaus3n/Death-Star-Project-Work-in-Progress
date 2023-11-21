@@ -133,12 +133,12 @@ const PlanetDetails = ({ currentPage }) => {
           </section>
         )}
 
-        <section className='people-container'>
+        {/* <section className='people-container'>
           <h1 className='sub-heading'>Notable Residents</h1>
           <div className='people-content'></div>
-        </section>
+        </section> */}
       </div>
-      <button onClick={goBack}>Go Back to Planets</button>
+      {/* <button onClick={goBack}>Go Back to Planets</button> */}
     </main>
   );
 };

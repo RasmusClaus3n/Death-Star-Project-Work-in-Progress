@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
 
 import { CallSWAPI } from '../api/CallSWAPI';
 import Loader from './Loader';
@@ -8,11 +8,21 @@ import ErrorMsg from './ErrorMsg';
 import { formatPopulation } from '../utils/formatPopulation';
 import { assignPlanetImg, assignFilmImgs } from '../utils/assignImagePaths';
 
-const PlanetDetails = () => {
+const PlanetDetails = ({ currentPage }) => {
   const { planetName } = useParams();
+  const {
+    data: planetData,
+    loading,
+    error,
+  } = CallSWAPI(
+    `https://swapi.dev/api/planets/?search=${planetName}&format=json`
+  );
 
-  const PLANET_URL = `https://swapi.dev/api/planets/?search=${planetName}&format=json`;
-  const { data: planetData, loading, error } = CallSWAPI(PLANET_URL);
+  const navigate = useNavigate(); // Get the navigate function
+
+  const goBack = () => {
+    navigate(-1); // Navigate back to the previous page
+  };
 
   if (loading) {
     return <Loader />;
@@ -128,6 +138,7 @@ const PlanetDetails = () => {
           <div className='people-content'></div>
         </section>
       </div>
+      <button onClick={goBack}>Go Back to Planets</button>
     </main>
   );
 };

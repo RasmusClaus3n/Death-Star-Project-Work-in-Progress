@@ -1,5 +1,6 @@
 import React from 'react';
 import { assignPlanetImg } from '../utils/assignImagePaths';
+
 const Planet = ({ name, terrain }) => {
   let terrainFirstWord = terrain?.split(',')[0].trim().toLowerCase();
 
